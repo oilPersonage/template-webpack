@@ -4,7 +4,7 @@ module.exports = function () {
             stats: 'errors-only',
             port: 3000,
             contentBase: "/source/",
-            hot: true,
+            // hot: true,
         }
     }
 };

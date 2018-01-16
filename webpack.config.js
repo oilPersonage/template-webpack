@@ -32,13 +32,15 @@ const common = merge([
                 chunks: ['index', 'common'],
                 template: PATHS.source + '/index.html'
             }),
-            new webpack.HotModuleReplacementPlugin()
+            // new webpack.HotModuleReplacementPlugin()
         ]
     },
     html(),
     reactJs(),
     images(),
-    fonts()
+    fonts(),
+    sass(),
+    css()
 ]);
 
 module.exports = function(env) {
@@ -53,8 +55,6 @@ module.exports = function(env) {
         return merge([
             common,
             devserver(),
-            sass(),
-            css()
         ])
     }
 };
